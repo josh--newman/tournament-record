@@ -61,4 +61,10 @@
         }
     });
 
+    // Send FB event on form submission
+    var form = $('#mc_embed_signup form');
+    form.on('submit', function() {
+      fbq('track', 'Lead');
+    })
+
 })(jQuery); // End of use strict
